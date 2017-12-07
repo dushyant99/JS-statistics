@@ -1,0 +1,15 @@
+w=[10,10,20,30,40,10,50,60,20];
+
+function mean(a)
+{
+  var sum=0;
+  for(var i=0;i<a.length;i++)
+  sum=sum+a[i];
+
+
+  return sum/a.length;
+}
+
+
+var m1=mean(w);
+console.log("the mean of the values in the above array is: "+m1);
