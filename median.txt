@@ -1,0 +1,29 @@
+var a=[7,9,5,3,8,10,2,1];
+
+function sort(a)
+{
+var i,j,key;
+
+for(i=1;i<a.length;i++)
+{
+key=a[i];
+j=i-1;
+while(j>=0 && a[j]>key)
+{
+a[j+1]=a[j];
+j--;
+}//end of while
+a[j+1]=key;
+}//end of for
+return a;
+}//end of function
+
+var b=sort(a);
+console.log("The sorted array is as follows: "+b);
+
+if(b.length%2==0)
+var c=(b[b.length/2]+b[(b.length/2)-1])/2;
+else
+var c=b[(b.length-1)/2];
+
+console.log("The median of the above array is: "+c);
